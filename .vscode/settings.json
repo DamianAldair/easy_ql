@@ -1,0 +1,17 @@
+{
+    "cSpell.words": [
+        "AUTOINCREMENT",
+        "autoincremental",
+        "Codefinity",
+        "Geeksfor",
+        "Mysql",
+        "postgres",
+        "RDBMS",
+        "ROWNUM",
+        "Sybase",
+        "varchar"
+    ],
+    "markdownlint.config": {
+        "MD041": false
+    }
+}

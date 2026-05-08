@@ -1,0 +1,24 @@
+include: package:lints/recommended.yaml
+
+linter:
+  rules:
+    camel_case_types: true
+    constant_identifier_names: true
+    prefer_const_constructors: true
+    prefer_const_declarations: true
+    prefer_final_locals: true
+    prefer_final_in_for_each: true
+    prefer_relative_imports: true
+    public_member_api_docs: true
+    sort_pub_dependencies: true
+    require_trailing_commas: true
+
+analyzer:
+  exclude:
+    - "lib/generated_plugin_registrant.dart"
+    - "lib/l10n/*.dart"
+    - "**/generated/**"
+    - "**/assets/**"
+
+formatter:
+  trailing_commas: preserve

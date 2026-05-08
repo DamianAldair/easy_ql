@@ -3,7 +3,6 @@ import '../../models/conditions.dart';
 import '../../utils/internal_extensions.dart';
 import '../statement.dart';
 import 'dml.dart';
-import 'update.dart';
 
 /// The INSERT INTO command is used to insert new rows in a table.
 ///

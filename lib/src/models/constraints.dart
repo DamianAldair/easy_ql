@@ -70,9 +70,9 @@ class Default extends ColumnConstraint {
 /// {@endtemplate}
 class ForeignKeyReference extends ColumnConstraint {
   /// Create a Foreign Key constraint.
-  const ForeignKeyReference({
-    required this.referencedTable,
-    required this.referencedColumns,
+  const ForeignKeyReference(
+    this.referencedTable,
+    this.referencedColumn, {
     this.onDelete,
     this.onUpdate,
   });
@@ -81,7 +81,7 @@ class ForeignKeyReference extends ColumnConstraint {
   final String referencedTable;
 
   /// Referenced columns.
-  final Set<String> referencedColumns;
+  final String referencedColumn;
 
   /// {@template onDelete}
   /// The ON DELETE option specifies the action taken when a record,
@@ -99,13 +99,10 @@ class ForeignKeyReference extends ColumnConstraint {
 
   @override
   String toString() {
-    final formattedReferencedColumns =
-        referencedColumns.map((c) => c.quoted()).join(', ');
-
     final parts = <String>[
       'REFERENCES',
       referencedTable.quoted(),
-      '($formattedReferencedColumns)',
+      '(${referencedColumn.quoted()})',
       if (onDelete != null) 'ON DELETE $onDelete',
       if (onUpdate != null) 'ON UPDATE $onUpdate',
     ];

@@ -106,7 +106,7 @@ void main() {
               nullConflictClause: ConflictClause.rollback,
               references: ForeignKeyReference(
                 referencedTable: 'referenced_table',
-                referencedColumns: {'rc1'},
+                referencedColumn: {'rc1'},
               ),
             ),
             const TableColumn(

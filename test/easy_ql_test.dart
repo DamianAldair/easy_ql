@@ -104,10 +104,7 @@ void main() {
               'fk1',
               type: DataType.bigInteger,
               nullConflictClause: ConflictClause.rollback,
-              references: ForeignKeyReference(
-                referencedTable: 'referenced_table',
-                referencedColumn: {'rc1'},
-              ),
+              references: ForeignKeyReference('referenced_table', 'rc1'),
             ),
             const TableColumn(
               'fk2',

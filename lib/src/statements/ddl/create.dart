@@ -13,7 +13,7 @@ class Create extends Statement with Ddl {
     bool unique = false,
     bool ifNotExists = false,
     required String onTable,
-    required Set<String> columns,
+    required Iterable<String> columns,
   })  : _unique = unique,
         _ifNotExists = ifNotExists,
         _onTable = onTable,
@@ -43,7 +43,7 @@ class Create extends Statement with Ddl {
   Create.table(
     this._name, {
     bool ifNotExists = false,
-    required Set<TableColumn> columns,
+    required Iterable<TableColumn> columns,
     Iterable<TableConstraint> constraints = const Iterable.empty(),
   })  : _ifNotExists = ifNotExists,
         _unique = null,
@@ -82,11 +82,11 @@ class Create extends Statement with Ddl {
 
   final String? _onTable;
 
-  final Set<String>? _columns;
+  final Iterable<String>? _columns;
 
   final String? _subquery;
 
-  final Set<TableColumn>? _tableColumns;
+  final Iterable<TableColumn>? _tableColumns;
 
   final Iterable<TableConstraint>? _constraints;
 

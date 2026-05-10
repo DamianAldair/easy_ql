@@ -142,7 +142,7 @@ class PrimaryKey extends TableConstraint {
   }) : assert(columns.length > 0);
 
   /// Columns that will be Primary Keys.
-  final Set<String> columns;
+  final Iterable<String> columns;
 
   @override
   String toString() {
@@ -170,13 +170,13 @@ class ForeignKey extends TableConstraint {
   }) : assert(columns.length > 0);
 
   /// Columns that will be Foreign Keys.
-  final Set<String> columns;
+  final Iterable<String> columns;
 
   /// Referenced table.
   final String referencedTable;
 
   /// Referenced columns.
-  final Set<String> referencedColumns;
+  final Iterable<String> referencedColumns;
 
   /// {@macro onDelete}
   final ForeignKeyAction? onDelete;

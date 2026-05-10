@@ -47,7 +47,7 @@ class Insert extends Statement with Returning {
   Insert.fromSubqueryInto(
     this._table, {
     ConflictClause? or,
-    Set<String>? columns,
+    Iterable<String>? columns,
     required String subquery,
     OnConflict? onConflict,
     Iterable<String>? returning,
@@ -78,7 +78,7 @@ class Insert extends Statement with Returning {
   Insert.into(
     this._table, {
     ConflictClause? or,
-    Set<String>? columns,
+    Iterable<String>? columns,
     required Iterable<Iterable<Object?>> values,
     OnConflict? onConflict,
     Iterable<String>? returning,
@@ -97,7 +97,7 @@ class Insert extends Statement with Returning {
 
   final bool _defaultValues;
 
-  final Set<String>? _columns;
+  final Iterable<String>? _columns;
 
   final String? _subquery;
 
@@ -174,7 +174,7 @@ class OnConflict {
   });
 
   /// Indexed columns
-  final Set<String>? columns;
+  final Iterable<String>? columns;
 
   /// Expression to be evaluated.
   final Condition? where;

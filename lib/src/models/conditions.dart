@@ -294,6 +294,7 @@ class _Between extends Condition {
     );
 
     final parts = <String>[
+      column.quoted(),
       if (not) 'NOT',
       'BETWEEN',
       value1.toSqlValue(),

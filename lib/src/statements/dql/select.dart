@@ -35,6 +35,8 @@ class Select extends Statement {
     _columns = columns.map((c) => _normalizeColumn(VariousTypes(c)));
     if (into != null) {
       _targetTable = _normalizeTable(VariousTypes(into));
+    } else {
+      _targetTable = null;
     }
   }
 

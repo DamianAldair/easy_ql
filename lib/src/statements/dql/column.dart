@@ -37,9 +37,9 @@ abstract class SelectColumnBase {
 /// {@macro select}
 class AllFields extends SelectColumnBase {
   /// Equals to *.
-  const AllFields()
+  AllFields({String? from})
       : super(
-          toSelect: '*',
+          toSelect: '${from == null ? '' : '${from.quoted()}.'}*',
           quoted: false,
           alias: null,
         );

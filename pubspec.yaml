@@ -1,6 +1,6 @@
 name: easy_ql
 description: "Easily create SQL queries from pure Dart."
-version: 0.1.1
+version: 0.1.2
 repository: https://github.com/DamianAldair/easy_ql
 
 environment:

@@ -113,7 +113,7 @@ void main() {
       ),
     ],
     columns: [
-      const AllFields(),
+      AllFields(),
       Count(alias: 'count'),
     ],
     distinct: true,

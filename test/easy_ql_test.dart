@@ -241,7 +241,7 @@ void main() {
           ),
         ],
         columns: [
-          const AllFields(),
+          AllFields(from: 't1'),
           Count(alias: 'count'),
         ],
         distinct: true,
